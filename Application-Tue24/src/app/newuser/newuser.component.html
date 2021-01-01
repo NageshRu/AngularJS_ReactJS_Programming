@@ -1,0 +1,160 @@
+<div class="pop-box" id="print-section">
+    <mat-dialog-content>
+        <button class="close-btn" [mat-dialog-close]="true">
+            <mat-icon>clear</mat-icon>
+        </button>
+        <h3 class="title">Add User</h3>
+        <h3 class="subtitle">You are new user,Please add information</h3>
+        <form [formGroup]="adduser">
+            <div class="form-row" id="userform">
+            <div class="form-group col-md-6">
+                <label for="inputname">First Name *</label><br>
+                <input type="text" formControlName="firstname" class="form-control" id="inputname"><br>
+                <span class="error" *ngIf="firstname.invalid && firstname.touched">firstname is required</span>
+            </div>
+            <br/>
+            <div class="form-group col-md-6" id="middlename">
+                <label for="inputmn">Middle Name</label>
+                <input type="text" formControlName="middlename" class="form-control" id="inputmn">
+              </div>
+        
+              <div class="form-group col-md-6">
+                <label for="inputln">Last Name</label>
+                <input type="text" formControlName="lastname" class="form-control" id="inputln">
+              </div>
+        
+              <div class="form-group col-md-6">
+                <label for="inputdob">DOB *</label>
+                <input type="date" formControlName="dob"  data-date-inline-picker="true" class="form-control" id="inputdob">
+                <span class="error" *ngIf="dob.invalid && dob.touched">date of birth is required</span>
+              </div>
+        
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="email" formControlName="email" class="form-control" id="Email">
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Gender *</label>
+                <div id="gender-box">
+                <div class="form-check" id="gender">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Male
+                    </label>
+                  </div>
+        
+                  <div class="form-check" id="gender">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Female
+                    </label>
+                  </div>
+        
+                  <div class="form-check" id="gender">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Other
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group col-md-6">
+                <mat-form-field>
+                    <label>Office *</label><br/>
+                    <select class="form-check" id="office">
+                      <option value="az">A-Zone</option>
+                      <option value="bz">B-Zone</option>
+                      <option value="cz">C-Zone</option>
+                      <option value="dz">D-Zone</option>
+                    </select>
+                  </mat-form-field>
+              </div>
+
+
+              <div class="form-group col-md-6">
+                <mat-form-field>
+                    <label>Department *</label><br/>
+                    <select class="form-check" id="department">
+                      <option value="az">A-Zone</option>
+                      <option value="bz">B-Zone</option>
+                      <option value="cz">C-Zone</option>
+                      <option value="dz">D-Zone</option>
+                    </select>
+                  </mat-form-field>
+              </div>
+
+
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Home/Apartment *</label>
+                <input type="text" formControlName="homeApart" class="form-control" id="homeapart">
+                <span class="error" *ngIf="homeApart.invalid && homeApart.touched">home/apartment is required</span>
+              </div>
+        
+              <div class="form-group col-md-6">
+                <label for="inputEmail">City *</label>
+                <input type="text" formControlName="city" class="form-control" id="city">
+                <span class="error" *ngIf="city.invalid && city.touched">city is required</span>
+              </div>
+        
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Nearest Mark *</label>
+                <input type="email" formControlName="nearmark" class="form-control" id="near">
+                <span class="error" *ngIf="nearmark.invalid && nearmark.touched">nearest mark is required</span>
+              </div>
+           
+        
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Aadhar No</label>
+                <input type="text" formControlName="aadhar" class="form-control" id="aadhar">
+            </div>
+           
+        
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Password *</label>
+                <input type="password" formControlName="password" class="form-control" id="pass">
+                <span class="error" *ngIf="password.invalid && password.touched">password is required</span>
+              </div>
+           
+        
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Confirm Password *</label>
+                <input type="password" formControlName="confirmPassword" class="form-control" id="confirm">
+                <span class="error" *ngIf="confirmPassword.invalid && confirmPassword.touched">confirm password is required</span>
+            </div>
+
+            <div class="accept-term">
+              <label><input type="checkbox">&nbsp;Accept</label>&nbsp;&nbsp;&nbsp;
+              <u class="term" (click)="clickTerm()">Terms and Conditions</u><br>
+            </div>
+            
+            <div class="term-box" *ngIf="visible">
+                <div class="termAndCondition">
+                  In order to use most of the services, you must register and maintain an active personal user service account ("account"). You must be 18 years old to get an account. To register an account you need to submit some personal information like your name, address, mobile phone number, email address, username.
+                  You agree to keep accurate, complete and up-to-date information in your account. If you fail to maintain your accurate, complete and up-to-date account information, you may be unable to access and use the Services or terminate these Services and enter into an agreement with you.
+                  You are responsible for all activity that occurs within your account and you always agree to keep your account username and password safe and confidential. You may only have one account unless we have written permission otherwise.
+                  <br>
+                  <br>
+                </div>
+              </div>
+
+              <!-- ngxPrint printSectionId="print-section" [useExistingCss]="true" -->
+            <button class="btn btn-primary" mat-raised-button
+                matTooltip="Info about the action"
+                aria-label="Button that displays a tooltip when focused or hovered over"
+                ngxPrint printSectionId="print-section" [useExistingCss]="true">Print</button>
+
+                <button class="btn btn-primary" id="download" mat-raised-button
+                matTooltip="Info about the action"
+                aria-label="Button that displays a tooltip when focused or hovered over" (click)="downloadData()">Download</button>
+
+
+            </div>
+
+
+
+              </form>
+    </mat-dialog-content>
+</div>

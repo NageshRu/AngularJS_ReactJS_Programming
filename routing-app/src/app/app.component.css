@@ -1,0 +1,16 @@
+.titlebox{
+    padding-left: 600px;
+    background-color: #3498eb;
+    height: 60px;
+}
+
+.movement{
+    width:100%px;
+    height:40%;
+    color:red;
+    padding-left: 40%;
+    text-emphasis: after top 30%; 
+    font-size: large;
+    text-align: center;
+    background-color: #3498eb;
+  }

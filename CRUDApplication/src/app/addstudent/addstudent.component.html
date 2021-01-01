@@ -1,0 +1,104 @@
+<div class='title'>
+    <h1>Student Data Form</h1>
+</div>
+
+<div class='container'>
+    <form [formGroup]="studentForm" #myForm=ngForm>
+        <div class="form-group">
+            <label for="Roll_No" >Roll_No: </label><br />
+            <input type="text" formControlName="Roll_No" id="Roll_No" name="Roll_No" [(ngModel)]="studentObj.Roll_No" > <br>
+            
+            <div *ngIf="Roll_No.invalid && Roll_No.touched" class="alert alert-danger">
+                <span class="error" *ngIf="Roll_No.invalid">roll no is required</span><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="First_Name" >First Name: </label><br />
+            <input type="text" id="First_Name" formControlName="First_Name" name="First_Name" [(ngModel)]="studentObj.First_Name"><br> 
+            <div *ngIf="First_Name.invalid && First_Name.touched" class="alert alert-danger">
+                <span class="error" *ngIf="First_Name.invalid">first name is required</span><br>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="Last_Name">Last Name:</label><br />
+            <input type="text" id="Last_Name" formControlName="Last_Name" name="Last_Name" [(ngModel)]="studentObj.Last_Name"> <br/>
+            <div *ngIf="Last_Name.invalid && Last_Name.touched" class="alert alert-danger">
+                <span class="error" *ngIf="Last_Name.invalid">last name is required</span><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label><br />
+            <input type="text" id="email" formControlName="email" name="email" [(ngModel)]="studentObj.email"> <br/>
+            <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+                <span class="error" *ngIf="email.invalid">email is required</span><br>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" formControlName="password" name="password" [(ngModel)]="studentObj.password"> <br/>
+            <div *ngIf="password.invalid && password.touched" class="alert alert-danger">
+                <span class="error" *ngIf="password.invalid">password is required</span><br>
+            </div>
+        </div>
+        <br><br>
+        <button (click)='addStudent(myForm.value)' type="button" class="btn btn-primary"  *ngIf="!isEdit">Submit</button> <!--myForm.value it given perticular form values-->
+        <button (click)='updateStu()'  *ngIf="isEdit">Update</button>
+
+        <div class='title'>
+            <h1>Student Details</h1>
+        </div>
+          
+        <div class='table-box' id='dvTable'>
+            <table id='myTable' class="table table-striped">
+              <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Action</th>
+                
+                    </tr>
+              </thead>
+             <tbody>
+                  <tr *ngFor="let stu of allStudent">
+                       <td>
+                           {{stu.Roll_No}}
+                       </td>
+                       
+                       <td>
+                            {{stu.First_Name}}
+                        </td>
+          
+                        <td>
+                            {{stu.Last_Name}}
+                        </td>
+
+                        <td>
+                            {{stu.email}}
+                        </td>
+
+                        <td>
+                            {{stu.password}}
+                        </td>
+                        <td>
+                            <button (click)="editStudent(stu)" class="btn btn-warning">
+                                Edit
+                            </button>
+          
+                            <button (click)="deleteStudentById(stu)" class="btn btn-warning">
+                                Delete
+                            </button>
+                        </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div> 
+    </form>
+</div>

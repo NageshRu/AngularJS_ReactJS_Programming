@@ -1,0 +1,38 @@
+<div class='top' id="main">
+    <!--<h1><b><i>Student Application</i></b></h1>-->
+
+    <ng-sidebar-container >
+ 
+      <!-- A sidebar -->
+      <ng-sidebar [opened]="opened">
+        
+            <button class="home">Home</button><br><br><br>
+            <button class="student" (click)="newStudent()">Student</button><br><br><br>
+            <button class="contact">Contact</button><br><br><br>
+            <button class="about">About</button>
+        
+      </ng-sidebar>
+    
+      <!-- Page content -->
+      <div ng-sidebar-content>
+        <button (click)="openNav()">Menu Open</button>
+      </div>
+    
+    </ng-sidebar-container>
+
+    <!--<a routerLink="/addnew" routerLinkActive="active">
+        <button type="button" class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+        </button>
+    </a>
+
+    <a routerLink="/displayData" routerLinkActive="active">    
+        <button (click)="displayStudent()" type="button" class="btn btn-primary btn-color btn-bg-color btn-sm col-xs-2 margin-left">
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> More Info.
+        </button>
+    </a>--> 
+  
+
+
+
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>ngClass</h1>
+    <div *ngFor="let car of cars" [ngStyle]="{'font-size.px':30}" [ngClass]="{
+      'alert-primary':car.name === 'MG Hector',
+      'alert-secondary':car.name === 'Ford',
+      'alert-success':car.name === 'Kia',
+      'alert-danger':car.name === 'BMW',
+      'alert-warning':car.name === 'Jaguar',
+      'alert-info':car.name === 'Suzuki'
+    }">
+     <a>{{ car.name }}</a>
+    </div>
+  </div>
+
+  <br><br>
+
+<div class='card'>
+    <div class='card-header'>
+      ngSwitch Example
+    </div>
+    <div class="card-body">
+      Input string : <input type='text' [(ngModel)]="num" />
+   
+      <div [ngSwitch]="num">
+        <div *ngSwitchCase="'1'">One</div>
+        <div *ngSwitchCase="'2'">Two</div>
+        <div *ngSwitchCase="'3'">Three</div>
+        <div *ngSwitchCase="'4'">Four</div>
+        <div *ngSwitchCase="'5'">Five</div>
+        <div *ngSwitchDefault>This is Default</div>
+      </div>
+    </div>
+  </div>

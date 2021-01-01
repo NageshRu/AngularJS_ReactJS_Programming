@@ -1,0 +1,255 @@
+.pop-box{
+    margin-left: 100px;
+    width: 700px;
+    height: 500px;
+}
+.close-btn{
+    margin-left: 650px;
+    border: none;
+    background-color:white;
+}
+
+.title{
+    text-align: center;
+    color: blue;
+}
+
+.subtitle{
+    text-align: center;
+    color: black;
+}
+
+.form-check{
+    display: flex;
+    flex-direction: column;
+}
+
+#gender-box{
+    display: flex;
+}
+
+input [type=text],select{
+    width: 180%;
+    height: 70%;
+    box-sizing: border-box;
+}
+
+.visible-icon{
+    padding-left: 80%;
+}
+.error{
+    color:red;
+}
+
+.btn{
+    margin-top: 20px;
+    margin-left: 35%;
+}
+
+#userform{
+    display: flex;
+}
+
+#inputname{
+    margin-right: 100px;
+}
+
+#inputname{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#inputmn{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#inputln{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#inputdob{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+
+#Email{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 70%;
+}
+
+
+#gender{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    width: 80%;
+    height: 70%;
+}
+
+#office{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 150%;
+}
+
+#department{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 150%;
+}
+
+#homeapart{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#city{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#near{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#aadhar{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#pass{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+
+#confirm{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    width: 80%;
+    height: 50%;
+}
+.accept-term{
+    margin-left: 250px;
+}
+
+.term:hover{
+    color:blue;
+}
+
+.term-box{
+    margin-left: 20px;
+    margin-right: 40px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 25px;
+    /*box-shadow:
+    0 1.3px 4.4px rgba(0, 0, 0, 0.189),
+    0 3.3px 11.2px rgba(0, 0, 0, 0.271),
+    0 6.7px 22.9px rgba(0, 0, 0, 0.339),
+    0 13.9px 47.1px rgba(0, 0, 0, 0.421),
+    0 38px 129px rgba(0, 0, 0, 0.61);*/
+}
+
+.termAndCondition{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+/*#print-section{
+    overflow: auto;
+}
+#print-section::-webkit-scrollbar{
+    width: 10px;
+}
+
+#print-section::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background-color:white;
+}
+
+#print-section::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:linear-gradient(red,yellow);
+}*/
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:gray;
+    border-radius: 20px;
+}
+#download{
+    margin-left: 50px;
+}
+
+@media print{
+    .term-box{
+        display: block;
+        page-break-after: auto;
+    }
+}

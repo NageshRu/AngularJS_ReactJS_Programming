@@ -1,0 +1,29 @@
+<div class="login-box">
+    <div>
+    <h3 style="text-align: center;color: blue;">Login</h3>
+    <form class="form-data" [formGroup]="loginForm" #myLoginForm=ngForm>
+        
+            <div class="form-group">
+                Email:<br>
+                <input #emailRef type="text" class="form-control" formControlName="email" id="email" name="email" [(ngModel)]="loginObj.email" required/>
+                <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
+                    <span class="error" *ngIf="email.invalid">email is required</span><br>
+
+                </div>
+            </div><br>
+        
+            <div class="form-group">
+                Password:<br>
+                <input type="password" class="form-control" formControlName="password" name="password" [(ngModel)]="loginObj.password" required/>
+                <div *ngIf="password.invalid && password.touched" class="alert alert-danger">
+                    <span class="error" *ngIf="password.invalid">password is required</span><br>
+
+                </div><br><br>
+            </div>
+            
+                <button class="btn btn-primary" mat-raised-button
+                matTooltip="Info about the action"
+                aria-label="Button that displays a tooltip when focused or hovered over" (click)="openPopUp()">Login</button>
+    </form>
+    </div>
+</div>  
